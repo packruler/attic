@@ -32,7 +32,10 @@ mod nix_store {
         fn apply_version_flags(&self, build: &mut Build) {
             let version = Version::from(&self.version).unwrap();
 
-            if version >= Version::from("2.20").unwrap() {
+            if version >= Version::from("2.29").unwrap() {
+                build.flag("-DATTIC_NIX_2_29");
+            }
+            else if version >= Version::from("2.20").unwrap() {
                 build.flag("-DATTIC_NIX_2_20");
             }
         }

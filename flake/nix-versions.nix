@@ -38,6 +38,7 @@ in
           default = pkgs.nix;
           "2.20" = pkgs.nixVersions.nix_2_20;
           "2.24" = pkgs.nixVersions.nix_2_24;
+          "2.29" = pkgs.nixVersions.nix_2_29;
         };
 
         manifestFile = let
